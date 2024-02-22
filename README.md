@@ -1,17 +1,21 @@
-# KNN_Classifier
-KNN Classifier to Detect Alzheimer’s Disease based on Samples from Two regions of Brain
+# Alzheimer’s Disease Diagnosis using KNN Classifier
 
-Alzheimer’s Disease (AD) diagnosis based on glucose metabolism changes in the brain.
+## Overview
+This project aims to develop a K-Nearest Neighbors (KNN) classifier to differentiate between stable Normal Controls (sNC) and stable Dementia of Alzheimer’s Type (sDAT) based on glucose metabolism in specific brain regions. By analyzing glucose metabolism patterns, the model predicts the likelihood of Alzheimer's Disease in individuals.
 
-Alzheimer’s Disease (AD) which is clinically referred to as the dementia of Alzheimer’s type (DAT) is a deadly
-disease that gradually causes the death of neurons in the brain (see Figure 1). It is believed that, long before the
-neuronal death happens, the neurons start exhibiting glucose hypometabolism, i.e., they become “sick” and are unable
-to perform their regular activities which is reflected in the lesser and lesser amount of glucose they “drink” from
-the blood. Although, there is currently no cure for DAT, early detection of DAT by identifying the reduced glucose
-metabolism patterns in the brain maybe help the development of disease modifying treatments in the future. 
+## Technical Explanation
 
+### Data Preprocessing
+The initial step involves preprocessing data from two brain regions, the isthmus cingulate and precuneus, to standardize features for the KNN classifier. This step is crucial for removing biases due to scale differences in the measurements.
 
-The goal of this assignment is to compare the glucose metabolism measurements taken from the isthmuscingulate
-and precuneus regions of the brain between healthy individuals or stable normal controls (sNC) and individuals with
-advanced or stable DAT (sDAT). Specifically, you will attempt to build a kNN classifier that can predict if an
-individual belongs to the sNC group or the sDAT group based on their brain glucose metabolism signature.
+### KNN Classifier
+The core of the project is the implementation of the KNN algorithm, which classifies samples based on the closest training examples in the feature space. The classifier is tested with different values of `k` to optimize its performance, utilizing Euclidean and Manhattan distances to measure similarity.
+
+### Performance Evaluation
+Classifier performance is evaluated through error rates on both training and independent test datasets. Visualization of classification boundaries and error rates for various `k` values and distance metrics provide insights into the model's accuracy and robustness.
+
+### Model Optimization
+The project explores different strategies to enhance the KNN classifier's performance, including adjusting the number of neighbors (`k`) and experimenting with distance metrics. The objective is to minimize error rates and improve predictive accuracy for Alzheimer’s Disease diagnosis.
+
+## Conclusion
+Through careful model tuning and evaluation, this project demonstrates the potential of KNN classifiers in medical diagnostics, specifically in early detection of Alzheimer’s Disease based on glucose metabolism signatures in the brain.
